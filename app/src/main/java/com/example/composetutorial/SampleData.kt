@@ -70,6 +70,9 @@ object SampleData {
         Message(
             "Lexi",
             "Have you tried writing build.gradle with KTS?"
+        ),Message(
+            "Laura",
+            "Hey, I was wondering if you're available on Saturday night. I'm arranging a game night with our friends."
         ),
     )
 }
