@@ -73,6 +73,9 @@ object SampleData {
         ),Message(
             "Laura",
             "Hey, I was wondering if you're available on Saturday night. I'm arranging a game night with our friends."
+        ),Message(
+            "Laudna",
+            "NAT 20!!!"
         ),
     )
 }
