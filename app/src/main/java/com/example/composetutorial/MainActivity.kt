@@ -25,6 +25,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composetutorial.ui.theme.ComposeTutorialTheme
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 
 
 class MainActivity : ComponentActivity() {
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     MessageCard(Message("Lexi", "Hey, take a look at Jetpack Compose, it's great!"))
                 }
+                Conversation(SampleData.conversationSample)
             }
         }
     }
@@ -97,5 +100,22 @@ fun PreviewMessageCard() {
                 Message("Laura", "Hey, I was wondering if you're available on Saturday night. I'm arranging a game night with our friends."))
 
         }
+    }
+}
+
+@Composable
+fun Conversation(messages: List<Message>) {
+    LazyColumn {
+        items(messages) { message ->
+            MessageCard(message)
+        }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewConversation() {
+    ComposeTutorialTheme {
+        Conversation(SampleData.conversationSample)
     }
 }
