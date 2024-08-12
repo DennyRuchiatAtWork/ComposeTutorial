@@ -37,6 +37,7 @@ import androidx.compose.animation.animateContentSize
 
 
 class MainActivity : ComponentActivity() {
+    //ComposeTutorial
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
